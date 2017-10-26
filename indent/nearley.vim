@@ -6,9 +6,9 @@ function! NearleyIndent()
   let previous = getline(previousNum)
 
   if previous =~ "{" && previous !~ "}" && (line !~ "}" || line !~ "%}")
-    return indent(previousNum) + &tabstop
+    return indent(previousNum) + &shiftwidth
   elseif (line =~ "}" || line =~ "%}") && line !~ "{"
-    return indent(previousNum) - &tabstop
+    return indent(previousNum) - &shiftwidth
   else
     return indent(previousNum)
   endif
