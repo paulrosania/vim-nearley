@@ -23,7 +23,7 @@ highlight link NearleyString String
 highlight link NearleyNonTerminal Special
 
 syntax include @JavaScript syntax/javascript.vim
-syntax region NearleyBraces start="{%" keepend end="%}" contains=@JavaScript
-syntax keyword NearleyBuiltin id joiner arrconcat nuller containedin=NearleyBraces
+syntax region javascriptPostProcessor start="{%" keepend end="%}" contains=@JavaScript
+syntax keyword NearleyBuiltin id joiner arrconcat nuller containedin=javascriptPostProcessor
 syntax region javascriptCode start="@{%" keepend end="%}" contains=@JavaScript
 
