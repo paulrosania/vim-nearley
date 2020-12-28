@@ -1,6 +1,5 @@
 
-syntax match NearleyInclude '\v^\@builtin'
-syntax match NearleyInclude '\v^\@include'
+syntax match NearleyInclude '\v^\@\w+'
 syntax match NearleyComment '\v#.*'
 
 syntax match NearleyOperator /\v\-\>/
